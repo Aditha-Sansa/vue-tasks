@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="container mx-auto py-6">
+      <h1>Vuetasks</h1>
+      <p>Type in to add a task. We've already added some tasks for you</p>
+    </div>
     <div class="w-full h-screen flex justify-center">
       <div class="w-full md:w-1/3 bg-white rounded-lg">
         <div class="px-12 pb-10">
@@ -17,9 +21,7 @@
             </div>
           </div>
           <div class="w-full mb-2">
-            <div
-              v-if="tasks.length"
-            >
+            <div v-if="tasks.length">
               <Task
                 v-for="task in tasks"
                 :key="task.id"
@@ -89,7 +91,7 @@ export default {
 
     focusTaskInput() {
       this.$refs.taskinput.$el.focus();
-    }
+    },
   },
 };
 </script>

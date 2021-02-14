@@ -1,30 +1,24 @@
 <template>
   <div id="app">
-    <Header />
-
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <div class="container mx-auto py-6">
-    <h1>Vuetasks</h1>
-    <p>Type in to add a task. We've already added some tasks for you</p>
+    <div id="nav">
+      <Header/>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
     </div>
     <div class="container mx-auto py-6">
-      <!-- <TasksList /> -->
-      <router-view/>
+    <router-view/>
     </div>
   </div>
 </template>
 
 <script>
-// import TasksList from "./components/TasksList.vue";
 import Header from "./components/Header.vue";
-
 export default {
-  components: {
+    components: {
     Header,
-  },
-};
+  }
+}
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -33,7 +27,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-h1 {
-  text-align: center;
+
+#nav a {
+  /* font-weight: bold;
+  color: #2c3e50; */
+}
+
+#nav a.router-link-exact-active {
+  /* color: #42b983; */
 }
 </style>
